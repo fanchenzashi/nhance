@@ -1,0 +1,49 @@
+---
+output: nhance
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+```{r}
+nhance <- function(file,output){
+  i <- haven::read_xpt(file)
+  seqn <- data.frame(SEQN=1:max(a$SEQN))
+  o <- dplyr::full_join(i,seqn,by='SEQN')
+  write.csv(o,output)
+}
+```
+# nhance
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of nhance is to Process the data in the NHance database and output the XPT format file into CSV format with a short code  .
+
+## Installation
+
+You can install the released version of nhance from [github](https://github.com/fanchenzashi/nhance) with:
+
+``` r
+devtools::install('fanchenzashi/nhance')
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(nhance)
+nhance('*.xpt','name.csv')
+## basic example code
+```
+
+
+
