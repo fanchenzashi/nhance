@@ -1,6 +1,6 @@
 Package: nhance
 Title: Process data in the NHANCE database
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "fan",
            family = "chen",
@@ -8,18 +8,20 @@ Authors@R:
            email = "1420249496@qq.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Process the data in the NHance database and output the XPT format file into CSV format with a short code  .
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-imports:dplyr,
-    haven
-
-
-
-
-
-
-
+imports: dplyverse,
+    haven,
+    xml2,
+    rvest,
+    dplyr,
+    haven,
+    tidyr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    magrittr
