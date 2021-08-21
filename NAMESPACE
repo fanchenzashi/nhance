@@ -2,4 +2,5 @@
 
 export("%>%")
 export(nhance)
+export(find_nhance)
 importFrom(magrittr,"%>%")
