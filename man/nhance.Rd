@@ -17,9 +17,6 @@ nhance(file, output)
 \description{
 xpt to csv
 }
-\examples{
-nhance('*.xpt','name.csv')
-}
 \author{
 fanchenzashi
 }
