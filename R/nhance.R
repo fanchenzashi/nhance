@@ -4,11 +4,9 @@
 #' @param output csv
 #' @name nhance
 #' @description xpt to csv
-#'
 #' @return
 #' @export nhance
-#'
-#' @examples nhance('*.xpt','name.csv')
+#' @examples
 nhance <- function(file,output){
   i <- haven::read_xpt(file)
   seqn <- data.frame(SEQN=1:max(i$SEQN))
